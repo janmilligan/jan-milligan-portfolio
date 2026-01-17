@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 
+  Fix: Set background on HTML to prevent white flash 
+  before React mounts or if body opacity is manipulated.
+*/
+html {
+  background-color: #1c1c1c;
+}
+
+body {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  overflow-x: hidden;
+  /* High-end typography rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1c1c1c;
+}
+::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+/* Smooth selection color */
+::selection {
+  background: rgba(255, 255, 255, 0.9);
+  color: #1c1c1c;
+}
